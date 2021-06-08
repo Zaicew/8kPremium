@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace _8kPremiom
 {
@@ -22,6 +24,13 @@ namespace _8kPremiom
                 }
             }
             return result;
+        }
+
+        public int BinaryGapRegEx(int number)
+        {
+            string binaryNumber = ConvertoBinary(number);
+
+            return Regex.Matches(binaryNumber, @"0*0").Select(p => p.Value.Length).ToArray<int>().Max();
         }
 
         private string ConvertoBinary(int number)
