@@ -20,6 +20,5 @@ namespace _8kPremiom
             }
             return result;
         }
-
     }
 }

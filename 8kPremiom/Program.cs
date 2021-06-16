@@ -19,6 +19,20 @@ namespace _8kPremiom
             Console.WriteLine("========================Task2========================");
             Console.WriteLine(task2.CountJewelsInStones("z", "ZZ"));
             Console.WriteLine(task2.CountJewelsInStones("aA", "aAAbbb"));
+
+
+            var task3 = new Task3();
+            Console.WriteLine("========================Task3.1========================");
+            Console.WriteLine("Expect false... {0}", task3.Panagram("input"));
+            Console.WriteLine("Expect true... {0}", task3.Panagram("The quick brown fox jumps over the lazy dog"));
+            Console.WriteLine("========================Task3.2========================");
+            Console.WriteLine("Expect false... {0}", task3.Panagram2("input"));
+            Console.WriteLine("Expect true... {0}", task3.Panagram2("The quick brown fox jumps over the lazy dog"));
+            Console.WriteLine("========================Task3.3========================");
+            Console.WriteLine("Expect false... {0}", task3.Panagram3("input"));
+            Console.WriteLine("Expect true... {0}", task3.Panagram3("The quick brown fox jumps over the lazy dog"));
+
+
         }
     }
 }
