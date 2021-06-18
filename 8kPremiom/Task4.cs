@@ -10,19 +10,19 @@ namespace _8kPremiom
 
         public int LeafSummary(int?[] input)
         {
-            if (input.Length>1000)
-                throw new ArgumentOutOfRangeException("Too many arguments! Input should be shorter than 1000 items!");
+            if (input.Length > 10000 || input.Length < 1) 
+                throw new ArgumentOutOfRangeException("Too many arguments! Input quantity should be between 1 and 10000!");
             if (input.Max() > 100 || input.Min() < 0)
-                throw new ArgumentOutOfRangeException("One or more inputs are incorrect. Arguments should between 0 and 100.");
+                throw new ArgumentOutOfRangeException("One or more inputs are incorrect. Arguments should be between 0 and 100.");
 
             int counter = RowsQuantity(input.Length);
             int indexStart = IndexOfFirstElementInLastRow(counter);
 
             int output = 0;
-            for (int i = indexStart; i <= input.Length; i++)
+            while(indexStart <= input.Length)
             {
-                if (input[i - 1] != null)
-                    output += input[i - 1].Value;
+                if (input[indexStart - 1] != null) { output += input[indexStart - 1].Value; }
+                indexStart++;
             }
         return output;
         }
@@ -48,13 +48,6 @@ namespace _8kPremiom
             }
             return output;
 
-        }
-
-        private bool IsLenghtLowerThanThousand(int input)
-        {
-            return input < 1000 ?
-                true :
-                throw new ArgumentOutOfRangeException("Too many arguments! Input should be shorter than 1000 items!");
         }
     }
 }
