@@ -33,6 +33,14 @@ namespace _8kPremiom
             Console.WriteLine("Expect true... {0}", task3.Panagram3("The quick brown fox jumps over the lazy dog"));
 
 
+            Console.WriteLine("========================Task4========================");
+            int?[] tab = new int?[] { 1, 2, 3, 4, 5, null, 6, 7, null, null, null, null, 8 };
+            int?[] tab2 = new int?[] { 6, 7, 8, 2, 7, 1, 3, 9, null, 1, 4, null, null, null, 5 };
+            var task4 = new Task4();
+
+            Console.WriteLine(task4.LeafSummary(tab));
+            Console.WriteLine(task4.LeafSummary(tab2));
+
         }
     }
 }
