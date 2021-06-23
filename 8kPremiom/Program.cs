@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace _8kPremiom
@@ -40,6 +41,13 @@ namespace _8kPremiom
 
             Console.WriteLine(task4.LeafSummary(tab));
             Console.WriteLine(task4.LeafSummary(tab2));
+
+
+            Console.WriteLine("========================Task5========================");
+            var task5 = new Task5();
+            Console.WriteLine("Expect true... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 2, 3, 4, 5 }, 7));
+            Console.WriteLine("Expect true... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 10, 15, 3, 7 }, 17));
+            Console.WriteLine("Expect false... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 10, 15 }, 17));
 
         }
     }
