@@ -6,10 +6,6 @@ using System.Text.RegularExpressions;
 
 namespace _8kPremiom
 {
-    public enum Column
-    {
-        none, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, W, V, X, Y, Z
-    }
     class Task6
     {
         private Dictionary<char, int> Alphabet = new Dictionary<char, int>()
@@ -55,7 +51,22 @@ namespace _8kPremiom
                 Alphabet.GetValueOrDefault(columnTitle[0]) * 26 + Alphabet.GetValueOrDefault(columnTitle[1]) :
                 Alphabet.GetValueOrDefault(columnTitle[0]);
 
+        }
 
+        public int TitleToNumber2(string columnTitle)
+        {
+            if (Regex.IsMatch(columnTitle, @"[^a-zA-Z]"))
+                throw new FormatException("Wrong Input! Use only combination A-Z letters");
+            columnTitle.ToUpper();
+            int output = 0;
+            int multiplier = 1;
+
+            for (int i = columnTitle.Length - 1; i > -1; i--)
+            {
+                output += Alphabet.GetValueOrDefault(columnTitle[i]) * multiplier;
+                multiplier *= 26;
+            }
+            return output;
         }
     }
 }
