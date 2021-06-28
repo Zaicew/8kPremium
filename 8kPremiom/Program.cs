@@ -43,11 +43,26 @@ namespace _8kPremiom
             Console.WriteLine(task4.LeafSummary(tab2));
 
 
-            Console.WriteLine("========================Task5========================");
-            var task5 = new Task5();
-            Console.WriteLine("Expect true... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 2, 3, 4, 5 }, 7));
-            Console.WriteLine("Expect true... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 10, 15, 3, 7 }, 17));
-            Console.WriteLine("Expect false... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 10, 15 }, 17));
+            //Console.WriteLine("========================Task5========================");
+            //var task5 = new Task5();
+            //Console.WriteLine("Expect true... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 2, 3, 4, 5 }, 7));
+            //Console.WriteLine("Expect true... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 10, 15, 3, 7 }, 17));
+            //Console.WriteLine("Expect false... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 10, 15 }, 17));
+
+
+            var task6 = new Task6();
+
+            Console.WriteLine("Should be 1... {0}", task6.TitleToNumber("A")); 
+            Console.WriteLine("Should be 26... {0}", task6.TitleToNumber("Z"));
+            Console.WriteLine("Should be 27... {0}", task6.TitleToNumber("AA"));
+            Console.WriteLine("Should be 702... {0}", task6.TitleToNumber("ZZ"));
+            Console.WriteLine("Should be 703... {0}", task6.TitleToNumber("AAA"));
+            Console.WriteLine("Should be 729... {0}", task6.TitleToNumber("ABA"));
+            Console.WriteLine("Should be 1378... {0}", task6.TitleToNumber("AZZ"));
+            Console.WriteLine("Should be 1379... {0}", task6.TitleToNumber("BAA"));
+
+
+            // Console.WriteLine("Should be error!... {0}", task6.TitleToNumber("Z2"));
 
         }
     }

@@ -9,9 +9,9 @@ namespace _8kPremiom
     {
         public bool CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(List<int> numbers, int k)
         {
-            for (int i = 0; i<numbers.Count; i++)
+            for (int i = 0; i < numbers.Count-1; i++)
             {
-                for(int j = i+1; i < numbers.Count; j++)
+                for(int j = i+1; i < numbers.Count-1; j++)
                 {
                     if (i == j) break;
                     if (numbers[i] + numbers[j] == k) return true;
