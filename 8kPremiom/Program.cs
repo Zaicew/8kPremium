@@ -49,6 +49,7 @@ namespace _8kPremiom
             //Console.WriteLine("Expect true... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 10, 15, 3, 7 }, 17));
             //Console.WriteLine("Expect false... {0}", task5.CheckIfSumOfAnyTwoDifferentNumbersFromListEqualsK(new List<int>() { 10, 15 }, 17));
 
+            Console.WriteLine("========================Task6========================");
 
             var task6 = new Task6();
 
@@ -60,9 +61,33 @@ namespace _8kPremiom
             Console.WriteLine("Should be 729... {0}", task6.TitleToNumber("ABA"));
             Console.WriteLine("Should be 1378... {0}", task6.TitleToNumber("AZZ"));
             Console.WriteLine("Should be 1379... {0}", task6.TitleToNumber("BAA"));
-
-
             // Console.WriteLine("Should be error!... {0}", task6.TitleToNumber("Z2"));
+
+
+            Console.WriteLine("========================Task7========================");
+            var task7 = new Task7();
+            Console.WriteLine("From 'I' should be 1... {0}", task7.RomanToInt("LVIII"));
+            Console.WriteLine("From 'V' should be 1... {0}", task7.RomanToInt("MCMXCIV"));
+            Console.WriteLine("From 'X' should be 1... {0}", task7.RomanToInt("X"));
+            Console.WriteLine("From 'L' should be 1... {0}", task7.RomanToInt("L"));
+            Console.WriteLine("From 'C' should be 1... {0}", task7.RomanToInt("C"));
+            Console.WriteLine("From 'D' should be 1... {0}", task7.RomanToInt("D"));
+            Console.WriteLine("From 'M' should be 1... {0}", task7.RomanToInt("M"));
+            Console.WriteLine("From 'IX' should be 1... {0}", task7.RomanToInt("IX"));
+            Console.WriteLine("From 'LVIII' should be 1... {0}", task7.RomanToInt("LVIII"));
+            Console.WriteLine("From 'MCMXCIV' should be 1... {0}", task7.RomanToInt("MCMXCIV"));
+            Console.ReadKey();
+            Console.WriteLine("Error! {0}", task7.RomanToInt("IIII"));
+            Console.WriteLine("Error! {0}", task7.RomanToInt("XXXX"));
+            Console.WriteLine("Error! {0}", task7.RomanToInt("CCCC"));
+            Console.WriteLine("Error! {0}", task7.RomanToInt("MMMM"));
+            Console.WriteLine("Error! {0}", task7.RomanToInt("VV"));
+            Console.WriteLine("Error! {0}", task7.RomanToInt("LL"));
+            Console.WriteLine("Error! {0}", task7.RomanToInt("DD"));
+            Console.WriteLine("Error! {0}", task7.RomanToInt("IIX"));
+            Console.WriteLine("Error! {0}", task7.RomanToInt("VX"));
+            Console.WriteLine("Error! {0}", task7.RomanToInt("DM"));
+
 
         }
     }
