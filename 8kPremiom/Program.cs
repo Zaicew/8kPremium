@@ -66,17 +66,17 @@ namespace _8kPremiom
 
             Console.WriteLine("========================Task7========================");
             var task7 = new Task7();
-            Console.WriteLine("From 'I' should be 1... {0}", task7.RomanToInt("LVIII"));
-            Console.WriteLine("From 'V' should be 1... {0}", task7.RomanToInt("MCMXCIV"));
-            Console.WriteLine("From 'X' should be 1... {0}", task7.RomanToInt("X"));
-            Console.WriteLine("From 'L' should be 1... {0}", task7.RomanToInt("L"));
-            Console.WriteLine("From 'C' should be 1... {0}", task7.RomanToInt("C"));
-            Console.WriteLine("From 'D' should be 1... {0}", task7.RomanToInt("D"));
-            Console.WriteLine("From 'M' should be 1... {0}", task7.RomanToInt("M"));
-            Console.WriteLine("From 'IX' should be 1... {0}", task7.RomanToInt("IX"));
-            Console.WriteLine("From 'LVIII' should be 1... {0}", task7.RomanToInt("LVIII"));
-            Console.WriteLine("From 'MCMXCIV' should be 1... {0}", task7.RomanToInt("MCMXCIV"));
-            Console.ReadKey();
+            //Console.WriteLine("From 'I' should be 1... {0}", task7.RomanToInt("LVIII"));
+            //Console.WriteLine("From 'V' should be 1... {0}", task7.RomanToInt("MCMXCIV"));
+            //Console.WriteLine("From 'X' should be 1... {0}", task7.RomanToInt("X"));
+            //Console.WriteLine("From 'L' should be 1... {0}", task7.RomanToInt("L"));
+            //Console.WriteLine("From 'C' should be 1... {0}", task7.RomanToInt("C"));
+            //Console.WriteLine("From 'D' should be 1... {0}", task7.RomanToInt("D"));
+            //Console.WriteLine("From 'M' should be 1... {0}", task7.RomanToInt("M"));
+            //Console.WriteLine("From 'IX' should be 1... {0}", task7.RomanToInt("IX"));
+            //Console.WriteLine("From 'LVIII' should be 1... {0}", task7.RomanToInt("LVIII"));
+            //Console.WriteLine("From 'MCMXCIV' should be 1... {0}", task7.RomanToInt("MCMXCIV"));
+            //Console.ReadKey();
             Console.WriteLine("Error! {0}", task7.RomanToInt("IIII"));
             Console.WriteLine("Error! {0}", task7.RomanToInt("XXXX"));
             Console.WriteLine("Error! {0}", task7.RomanToInt("CCCC"));

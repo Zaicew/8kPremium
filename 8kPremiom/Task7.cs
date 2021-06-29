@@ -21,44 +21,39 @@ namespace _8kPremiom
 
         public int RomanToInt(string input)
         {
-            Exception e = ValidateRomanNumber(input);
-            if (e != null)
-            {
-                Console.WriteLine(e.Message);
-                return -1;
-            }
-
             int output = 0;
             int actualBiggestCharacterTaken = 0;
-            foreach (var item in input.Reverse())
+            try
             {
-                if (RomanNumbers.GetValueOrDefault(item) < actualBiggestCharacterTaken)
+                if (Regex.IsMatch(input, @"[^IVXLCDM]"))
+                    throw new FormatException("Be sure you used only allowed letters : (I, V, X, L, C, D, M)");
+                if (Regex.IsMatch(input, @"I{4}|C{4}|X{4}|M{4}"))
+                    throw new FormatException("Input cannot contain more than 3 same letters next to each other : (I, X, C, M) ");
+                if (Regex.IsMatch(input, @"V{2}|L{2}|D{2}"))
+                    throw new FormatException("Input cannot contain 2 same characters close to each other : (V, L, D)");
+                if (Regex.IsMatch(input, @"V[XLCDM]|L[CDM]|DM"))
+                    throw new FormatException("Only characters (I, X, C) can stand before grater ones!");
+                if (Regex.IsMatch(input, @"II[VXLCDM]|XX[LCDM]|CC[DM]"))
+                    throw new FormatException("We cannot use two lower characters before grater one!");
+
+                foreach (var item in input.Reverse())
                 {
-                    output -= RomanNumbers.GetValueOrDefault(item);
-                }
-                else
-                {   actualBiggestCharacterTaken = RomanNumbers.GetValueOrDefault(item);
-                    output += actualBiggestCharacterTaken;
+                    if (RomanNumbers.GetValueOrDefault(item) < actualBiggestCharacterTaken)
+                    {
+                        output -= RomanNumbers.GetValueOrDefault(item);
+                    }
+                    else
+                    {
+                        actualBiggestCharacterTaken = RomanNumbers.GetValueOrDefault(item);
+                        output += actualBiggestCharacterTaken;
+                    }
                 }
             }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);                
+            }
             return output;
-        }
-
-
-        private FormatException ValidateRomanNumber(string input)
-        {
-            if (Regex.IsMatch(input, @"[^IVXLCDM]"))
-                return new FormatException("Be sure you used only allowed letters : (I, V, X, L, C, D, M)");
-            if(Regex.IsMatch(input, @"I{4}|C{4}|X{4}|M{4}"))
-                return new FormatException("Input cannot contain more than 3 same letters next to each other : (I, X, C, M) ");
-            if (Regex.IsMatch(input, @"V{2}|L{2}|D{2}"))
-                return new FormatException("Input cannot contain 2 same characters close to each other : (V, L, D)");
-            if (Regex.IsMatch(input, @"V[XLCDM]|L[CDM]|DM"))
-                return new FormatException("Only characters (I, X, C) can stand before grater ones!");
-            if (Regex.IsMatch(input, @"II[VXLCDM]|XX[LCDM]|CC[DM]"))
-                return new FormatException("We cannot use two lower characters before grater one!");
-
-            return null;
         }
     }
 }
