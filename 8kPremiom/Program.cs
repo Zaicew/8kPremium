@@ -77,16 +77,31 @@ namespace _8kPremiom
             //Console.WriteLine("From 'LVIII' should be 1... {0}", task7.RomanToInt("LVIII"));
             //Console.WriteLine("From 'MCMXCIV' should be 1... {0}", task7.RomanToInt("MCMXCIV"));
             //Console.ReadKey();
-            Console.WriteLine("Error! {0}", task7.RomanToInt("IIII"));
-            Console.WriteLine("Error! {0}", task7.RomanToInt("XXXX"));
-            Console.WriteLine("Error! {0}", task7.RomanToInt("CCCC"));
-            Console.WriteLine("Error! {0}", task7.RomanToInt("MMMM"));
-            Console.WriteLine("Error! {0}", task7.RomanToInt("VV"));
-            Console.WriteLine("Error! {0}", task7.RomanToInt("LL"));
-            Console.WriteLine("Error! {0}", task7.RomanToInt("DD"));
-            Console.WriteLine("Error! {0}", task7.RomanToInt("IIX"));
-            Console.WriteLine("Error! {0}", task7.RomanToInt("VX"));
-            Console.WriteLine("Error! {0}", task7.RomanToInt("DM"));
+            //Console.WriteLine("Error! {0}", task7.RomanToInt("IIII"));
+            //Console.WriteLine("Error! {0}", task7.RomanToInt("XXXX"));
+            //Console.WriteLine("Error! {0}", task7.RomanToInt("CCCC"));
+            //Console.WriteLine("Error! {0}", task7.RomanToInt("MMMM"));
+            //Console.WriteLine("Error! {0}", task7.RomanToInt("VV"));
+            //Console.WriteLine("Error! {0}", task7.RomanToInt("LL"));
+            //Console.WriteLine("Error! {0}", task7.RomanToInt("DD"));
+            //Console.WriteLine("Error! {0}", task7.RomanToInt("IIX"));
+            //Console.WriteLine("Error! {0}", task7.RomanToInt("VX"));
+            //Console.WriteLine("Error! {0}", task7.RomanToInt("DM"));
+
+            Console.WriteLine("========================Task8========================");
+
+            var task8 = new Task8();
+            Console.WriteLine("From () should be true... {0}", task8.CheckBracketsUsingDictionary("()")); 
+            Console.WriteLine("From () should be true... {0}", task8.CheckBracketsUsingDictionary("[]")); 
+            Console.WriteLine("From () should be true... {0}", task8.CheckBracketsUsingDictionary("{}"));
+            Console.WriteLine("From 1 should be true... {0}", task8.CheckBracketsUsingDictionary("()[]{}")); 
+            Console.WriteLine("From 2 should be true... {0}", task8.CheckBracketsUsingDictionary("{[]}")); 
+            Console.WriteLine("From 3 should be false... {0}", task8.CheckBracketsUsingDictionary("(]")); 
+            Console.WriteLine("From 4 should be false... {0}", task8.CheckBracketsUsingDictionary("(()[()]"));
+
+
+            Console.WriteLine(task8.ValidateMathematicalExpression("4+8+9+(41032-31231*988)+2-[46548-(564/65644)]"));
+            Console.WriteLine(task8.ValidateMathematicalExpression("4+8+(9+(41032-31231*988)+2-[46548-(564/65644)]"));
 
 
         }

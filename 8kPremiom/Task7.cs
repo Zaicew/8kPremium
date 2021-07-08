@@ -51,7 +51,7 @@ namespace _8kPremiom
             }
             catch(Exception e)
             {
-                Console.WriteLine(e);                
+                Console.WriteLine(e);
             }
             return output;
         }
